@@ -1,0 +1,259 @@
+@charset "utf-8";
+/* CSS Document */
+
+/******************************
+
+[Table of Contents]
+
+1. Fonts
+2. Body and some general stuff
+3. Header
+4. Menu
+5. Home
+6. Intro
+7. Services
+8. Milestones
+9. Agents
+10. Footer
+
+
+******************************/
+
+/***********
+1. Fonts
+***********/
+
+
+/*********************************
+2. Body and some general stuff
+*********************************/
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+    text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+}
+
+body {
+    font-family: 'Arial Narrow', sans-serif;
+    font-size: 14px;
+    background: whitesmoke;
+    color: #2b2e35;
+}
+
+div {
+    display: block;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+    margin-bottom: 0px;
+}
+
+{
+    height: 100%
+;
+}
+
+/*********************************
+3. Header
+*********************************/
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    z-index: 100;
+    -webkit-transition: all 600ms ease;
+    -moz-transition: all 600ms ease;
+    -ms-transition: all 600ms ease;
+    -o-transition: all 600ms ease;
+    transition: all 600ms ease;
+}
+
+.log_reg ul li a:hover {
+    color: #adc867;
+}
+
+.header_content {
+    width: 100%;
+    height: 61px;
+    background: #ffffff;
+    padding-left: 64px;
+}
+
+.logo {
+
+}
+
+.logo a {
+    font-size: 24px;
+    color: #6c7079;
+    font-weight: 600;
+}
+
+.logo a span {
+    text-transform: uppercase;
+    color: #2b2e35;
+}
+
+.main_nav {
+    height: 100%;
+    margin-left: 133px;
+}
+
+.main_nav ul {
+    height: 100%;
+}
+
+.main_nav ul li {
+    position: relative;
+    height: 100%;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+
+.main_nav ul li:not(:last-of-type) {
+    margin-right: 26px;
+}
+
+.main_nav ul li.active,
+.main_nav ul li:hover {
+    background: #adc867;
+}
+
+.main_nav ul li a {
+    line-height: 50px;
+    padding-left: 13px;
+    padding-right: 13px;
+    font-size: 16px;
+    color: #2b2e35;
+}
+
+/*----------!*** First Thermostat*!--------*/
+
+
+/*.singlie-product-area .zgzag-bottom {background-color: darkred}*/
+
+/*.single-product-area {*/
+/*    padding: 100px 0 100px;*/
+/*}*/
+/*.product-upper {*/
+
+/*}*/
+
+
+/*.container {*/
+/*    margin-right: 28.182px;*/
+/*    margin-left: 28.182px;*/
+/*    padding-left: 15px;*/
+/*    padding-right: 15px;*/
+/*    width: 1170px;*/
+/*    height:1350px;*/
+/*    background: #1c7430;*/
+/*}*/
+/*.row {*/
+/*    padding-top: 50px;*/
+/*    margin-right: -15px;*/
+/*    width: 1000px;*/
+/*    height:200px;*/
+/*    border-top-width: 15px;*/
+/*!*}*!*/
+/*.col-md-3 col-sm-6 {*/
+/*    padding-left: 15px;*/
+/*    padding-right: 15px;*/
+/*    width: 200px;*/
+/*    height:200px;*/
+/*}*/
+
+
+/*.zone-holder {*/
+/*    height: 600px;*/
+/*    width: 600px;*/
+/*    margin: 60px auto;*/
+/*    background: white;*/
+/*    position: relative;*/
+/*    margin-left: 100px;*/
+/*}*/
+
+/*.zone-holder-border {*/
+/*    height: 130px;*/
+/*    width: 150px;;*/
+/*    background: #b3d7ff;*/
+/*}*/
+
+/*.zone-holder-border h1 {*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    font-family: "Arial Narrow";*/
+/*    font-size: 2.5em;*/
+/*    text-align: center;*/
+/*    position: relative;*/
+/*    top: 25%;*/
+/*}*/
+
+/*.temperature {*/
+/*    font-size: 1.5em;*/
+/*    text-align: center;*/
+/*    padding-top: 20px;*/
+/*}*/
+
+/*!*----------!*** Second Thermostat*!--------*!*/
+
+.zone-holder2 {
+    width: 1000px;
+    height: 500px;
+    margin: 60px auto;
+    background: grey;
+    position: relative;
+    margin-left: 100px;
+}
+.zone-holder-border2 {
+    height: 200px;
+    width: 150px;
+    background: #b3d7ff;
+    margin-left: 50px;
+    margin-top: 100px;
+    top: 10px;
+    font-size: 1em;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+
+}
+.zone-holder-temperature {
+    top: 20px;
+    margin-left: 25px;
+    margin-right:25px;
+    margin-top: 50px;
+    font-size: 1em;
+    text-align: center;
+}
+
+
+
+
+
+/*.temperature2 {*/
+/*    font-size: 1.5em;*/
+/*    text-align: left;*/
+/*    padding-top: 20px;*/
+/*    padding-left: 20px;*/
+/*}*/
+
+
+
+
+
+

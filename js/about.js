@@ -16,7 +16,7 @@ $(document).ready(function()
 {
 	"use strict";
 
-	/* 
+	/*
 
 	1. Vars and Inits
 
@@ -45,7 +45,7 @@ $(document).ready(function()
 		setHeader();
 	});
 
-	/* 
+	/*
 
 	2. Set Header
 
@@ -63,7 +63,7 @@ $(document).ready(function()
 		}
 	}
 
-	/* 
+	/*
 
 	3. Init Menu
 
@@ -98,7 +98,7 @@ $(document).ready(function()
 		}
 	}
 
-	/* 
+	/*
 
 	4. Init Milestones
 
@@ -142,8 +142,8 @@ $(document).ready(function()
 		    		var counterTween = TweenMax.to(counter, 4,
 		    		{
 		    			value: endValue,
-		    			roundProps:"value", 
-						ease: Circ.easeOut, 
+		    			roundProps:"value",
+						ease: Circ.easeOut,
 						onUpdate:function()
 						{
 							document.getElementsByClassName('milestone_counter')[i].innerHTML = signBefore + counter.value + signAfter;
