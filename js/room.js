@@ -2,7 +2,6 @@ window.About = {
     API_URL: "http://localhost:8083",
 
     getRooms: function () {
-
         $.ajax({
             url: About.API_URL + "/rooms",
             method: "GET"
@@ -13,17 +12,36 @@ window.About = {
         })
     },
 
+    createRoom: function () {
+        let nameValue = $("#room-field").val();
+        let targetValueValue = $("#target-field").val();
 
-    displayRooms: function (rooms) {
-        let roomsHtml = '';
+        let requestBody = {
+            name: nameValue,
+            targetValue: targetValueValue
+        };
+        $.ajax({
+            url: About.API_URL + "/rooms",
+            method: "POST",
+            contentType: "application/json",
+            data: JSON.stringify(requestBody)
+        }).done(function () {
+            About.getRooms();
+        })
+    },
 
-        rooms.forEach(room => roomsHtml += About.getHtmlForOneRoom(room));
 
-        $('.zone-holder .zone-holder-border ').html(roomsHtml);
+    deleteRoom: function (id) {
+        $.ajax({
+            url: About.API_URL + "/rooms" + "/"+ id,
+            method: "DELETE",
+            contentType: "application/json"
+        }).done(function () {
+            About.getRooms();
+        })
     },
 
     getTemperatures: function () {
-
         $.ajax({
             url: About.API_URL + "/temperatures",
             method: "GET"
@@ -33,56 +51,83 @@ window.About = {
         })
     },
 
+    displayRooms: function (rooms) {
+        let roomsHtml = '';
+
+        rooms.forEach(room => roomsHtml += About.getHtmlForOneRoom(room));
+
+        $('#rooms-table tbody').html(roomsHtml);
+    },
+
     displayTemperatures: function (temperatures) {
         let temperaturesHtml = '';
 
         temperatures.forEach(temperature => temperaturesHtml += About.getHtmlForOneTemperature(temperature));
 
-        $('.zone-holder .zone-holder-border .zone-holder-temperature').html(temperaturesHtml);
+        $('.temperatureControl').html(temperaturesHtml);
     },
 
+
     updateTemperature: function (id) {
-        let temperaturesbody = {
-            targetvalue: targetValueValue
+        let temperaturebody = {
+            targetValue: targetValueValue
         };
         $.ajax({
             url: About.API_URL + "?id=" + id,
             method: "PUT",
             contentType: "application/json",
-            data: JSON.stringify(temperaturesbody)
+            data: JSON.stringify(temperaturebody)
         }).done(function () {
             About.getTemperatures(id);
         })
     },
 
     bindEvents: function () {
-        $("#zone-holder-temperature").delegate(".button", "click", function (event) {
+        $("#new-room-form").submit(function (event) {
             event.preventDefault();
-            let dataId = $(this).data("id");
-            About.updateTemperature();
+            About.createRoom();
         });
+
+            $("#rooms-table ").delegate(".delete-room ", "click", function (event) {
+            event.preventDefault();
+            let roomId = $(this).data("id");
+            About.deleteRoom(roomId);
+        });
+
+
+
+            // $("#temperatureControl").delegate(".button", "click", function (event) {
+            //     event.preventDefault();
+            //     let dataId = $(this).data("id");
+            //     About.updateTemperature();
+            // });
+
+
+
+
     },
+
 
 
     getHtmlForOneRoom: function (room) {
-        return `<div class="zone-holder">
-    <div class="zone-holder-border2 ">
-        <h1>${room.name}</h1>
-    </div>
-    </div> `
+        return ` <tr>
+            <td>${room.name}</td>
+            <td>20</td>
+            <td>${room.targetValue}</td>
+            <td><a href="#" data-id=${room.id} class="delete-room">Delete room</a></td>
+            <td>delete</td>
+        </tr>`
     },
 
-    getHtmlForOneTemperature: function (temperature) {
-        return `
-        <div class="zone-holder">
-            <div class="zone-holder-temperature">
-                <button> ${temperature.targetValue}  </button>
-            </div>
-        </div>
-        </div>`
-    }
 
+
+    getHtmlForOneTemperature: function (temperature) {
+        return ` <div class="temperatureControl">
+        <button>${temperature.targetValue}</button>
+    </div>`
+    }
 
 };
 About.getRooms();
-About.getTemperatures();
+// About.getTemperatures();
+About.bindEvents();

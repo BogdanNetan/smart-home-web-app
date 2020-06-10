@@ -19,51 +19,56 @@
     </div>
 </header>
 --Adding Thermostat--
-<!--<div class="single-product-area">-->
-<!--    <div class="container">-->
-<!--        <img src="images/termostat.jpg" alt="">-->
-<!--        <h2><a href="">Dormitor</a></h2>-->
-<!--        <div class="product-upper">-->
-<!--            <img src="images/termostat.jpg" alt="">-->
-<!--        </div>-->
+<div id="add room">
+    <h3>Add new room</h3>
+    <form id="new-room-form">
+
+        <input type="text" id="room-field" placeholder="Enter room name"/>
+        <input type="text" id="target-field" placeholder="Enter target value ">
+        <input type="submit" value="Save"/>
+    </form>
+</div>
+
+
+<div>
+    <table id="rooms-table">
+        <thead>
+        <tr>
+            <th>Room name</th>
+            <th>Current value</th>
+            <th>Target value</th>
+            <th>Actions</th>
+            <th>Edit</th>
+        </tr>
+        </thead>
+
+
+        <tbody>
+
+        </tbody>
+    </table>
+</div>
+
+
+<!--<div class="box">-->
+<!--    <div class="roomName">-->
+<!--        <p>Dormitor</p>-->
+<!--        <div class="deleteRoom">-->
+<!--        <button>21</button>-->
+
+
 <!--    </div>-->
+<!--    </div>-->
+
+<!--    &lt;!&ndash;    <div class="temperatureControl">&ndash;&gt;-->
+<!--&lt;!&ndash;        <button>21</button>&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
 <!--</div>-->
 
 
-<!--<div class="container">-->
-<!--<div class="row">-->
-<!--    <div class="col-md-3 col-sm-6">-->
-<!--                <h1>Dormitor</h1>-->
-<!--            </div>-->
-<!--            <div class="temperature">-->
-<!--                <button> 21grade</button>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-
-<div class="zone-holder">
-    <div class="zone-holder-border ">
-        <h1>Dormitor</h1>
-<!--        <form id="thermostat">-->
-        <div class="zone-holder-temperature">
-            <button>21grade</button>
-        </div>
-<!--        </form>-->
-    </div>
-    <!--    <div class="zone-holder-border2 ">-->
-    <!--        <h1>Dormitor</h1>-->
-    <!--        <div class="zone-holder-temperature">-->
-    <!--            <button>21grade</button>-->
-    <!--        </div>-->
-    <!--    </div>-->
-</div>
-
-
-</div>
-
 
 <script src="js/jquery-3.3.1.min.js"></script>
-<script src="js/jquery-3.5.0.js"></script>
+<!--<script src="js/jquery-3.5.0.js"></script>-->
 <script src="styles/bootstrap-4.1.2/popper.js"></script>
 <script src="styles/bootstrap-4.1.2/bootstrap.min.js"></script>
 <script src="plugins/greensock/TweenMax.min.js"></script>
