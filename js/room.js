@@ -82,8 +82,8 @@ window.About = {
             event.preventDefault();
             let roomId = $(this).data("id");
 
-            $(this).replaceWith($(` <input type="text" data-id="${roomId}" placeholder="Enter new room name"/>`),
-                        `<input type="submit" value="Save" id=${roomId}  class="submitroomName-mark">`);
+            // $(this).replaceWith($(` <input type="text" data-id="${roomId}" placeholder="Enter new room name"  class ="room-update" />` ),
+            //             `<input type="submit" value="Save" data-id=${roomId}  class="submitRoom">`);
 
 
                     // $("#rooms-table").delegate(".targetRoom", "click", function (event) {
@@ -95,8 +95,6 @@ window.About = {
                     //         $(this).siblings(".temperature-update").val("");
                     //     }
                     //     else
-
-
 
                 About.updateRoom(roomId);
         });
